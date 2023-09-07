@@ -222,3 +222,44 @@ Thu 07 Sep 2023 07:49:18 PM UTC:
  tests:  8|3
 total_score: 40/70
 2c395dd
+Thu 07 Sep 2023 07:56:51 PM UTC: 
+ hashmap.c | 19 ++++++++++++++-----
+ 1 file changed, 14 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:123:15: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucket’; did you mean ‘buckets’?
+  123 |   return map->bucket[indice];
+      |               ^~~~~~
+      |               buckets
+test.c:453:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  453 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:511:1: error: expected declaration or statement at end of input
+  511 | }
+      | ^
+In file included from test.c:4:
+hashmap.c:110:8: error: unused variable ‘aux’ [-Werror=unused-variable]
+  110 |   long aux = indice;
+      |        ^~~
+At top level:
+test.c:453:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  453 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:217:5: error: ‘insert_test5’ defined but not used [-Werror=unused-function]
+  217 | int insert_test5(){ //factor de carga>0.7, se llama a función enlarge
+      |     ^~~~~~~~~~~~
+test.c:131:6: error: ‘compare_test’ defined but not used [-Werror=unused-function]
+  131 | void compare_test(){
+      |      ^~~~~~~~~~~~
+test.c:125:6: error: ‘hash_test3’ defined but not used [-Werror=unused-function]
+  125 | void hash_test3(){ //no random
+      |      ^~~~~~~~~~
+test.c:111:6: error: ‘hash_test2’ defined but not used [-Werror=unused-function]
+  111 | void hash_test2(){ // colisiones
+      |      ^~~~~~~~~~
+test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-function]
+  100 | void hash_test1(){ // posición válida
+      |      ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d4b8d4e
