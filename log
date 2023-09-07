@@ -176,3 +176,17 @@ hashmap.c:106:1: error: expected identifier or ‘(’ before ‘}’ token
       | ^
 Compilation failed
 fc8c502
+Thu 07 Sep 2023 07:44:22 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:92:11: error: expected identifier or ‘(’ before ‘->’ token
+   92 |       Pair->key= NULL;
+      |           ^~
+hashmap.c: At top level:
+hashmap.c:106:1: error: expected identifier or ‘(’ before ‘}’ token
+  106 | }
+      | ^
+Compilation failed
+8645c70
