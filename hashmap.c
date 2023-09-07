@@ -67,8 +67,6 @@ void insertMap(HashMap * map, char * key, void * value) {
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
-
-
 }
 
 
@@ -83,6 +81,12 @@ HashMap * createMap(long capacity) {
 }
 
 void eraseMap(HashMap * map,  char * key) {
+
+    while (1)
+  {
+   Pair* dato = map->buckets[indice];
+    if (dato == NULL || dato->key == NULL)
+  {
   
 
 
