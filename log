@@ -2,3 +2,24 @@ Thu 07 Sep 2023 06:50:52 PM UTC:
  tests:  0|6
 total_score: 0/70
 9f29367
+Thu 07 Sep 2023 06:56:59 PM UTC: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:55:19: error: ‘Key’ undeclared (first use in this function)
+   55 |   HashMap* Map = (Key*)malloc(capacity)
+      |                   ^~~
+hashmap.c:55:19: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:55:23: error: expected expression before ‘)’ token
+   55 |   HashMap* Map = (Key*)malloc(capacity)
+      |                       ^
+hashmap.c:55:12: error: unused variable ‘Map’ [-Werror=unused-variable]
+   55 |   HashMap* Map = (Key*)malloc(capacity)
+      |            ^~~
+hashmap.c:58:1: error: control reaches end of non-void function [-Werror=return-type]
+   58 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+e69fd30
