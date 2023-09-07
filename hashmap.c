@@ -83,7 +83,7 @@ HashMap * createMap(long capacity) {
 void eraseMap(HashMap * map,  char * key) {
 
   long indice = hash(key, map->capacity);
-  
+  long aux = indice;
   while (1)
   {
    Pair* dato = map->buckets[indice];
