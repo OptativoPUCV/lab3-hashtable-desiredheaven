@@ -113,14 +113,14 @@ Pair * searchMap(HashMap * map,  char * key) {
     Pair* dato = map->buckets[indice];
     if (dato != NULL && strcmp(key,dato->key)==0)
     {
-      indice = (indice +1)%map->capacity;
+      return map->buckets[indice];
+    }
+            indice = (indice +1)%map->capacity;
       if (dato == NULL)
       {
         return NULL;
       }
-    }
-  
-  return map->buckets[indice];
+
 }
 
 Pair * firstMap(HashMap * map) {
