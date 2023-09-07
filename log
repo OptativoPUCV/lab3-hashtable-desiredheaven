@@ -55,3 +55,20 @@ Thu 07 Sep 2023 07:02:01 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 a611fa0
+Thu 07 Sep 2023 07:05:18 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:55:3: error: unknown type name ‘Map’
+   55 |   Map* Map = (Map*)malloc(sizeof(Map)*capacity);
+      |   ^~~
+hashmap.c:55:19: error: expected expression before ‘)’ token
+   55 |   Map* Map = (Map*)malloc(sizeof(Map)*capacity);
+      |                   ^
+hashmap.c:57:10: error: returning ‘int *’ from a function with incompatible return type ‘HashMap *’ {aka ‘struct HashMap *’} [-Werror=incompatible-pointer-types]
+   57 |   return Map;
+      |          ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+5e8156e
