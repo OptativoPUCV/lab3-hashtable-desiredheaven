@@ -116,3 +116,9 @@ hashmap.c:26:19: note: expected ‘char *’ but argument is of type ‘char’
 cc1: all warnings being treated as errors
 Compilation failed
 5353b6a
+Thu 07 Sep 2023 07:35:50 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|4
+total_score: 30/70
+3dbdd4d
