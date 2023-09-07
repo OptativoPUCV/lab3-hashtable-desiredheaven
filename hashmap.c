@@ -120,7 +120,7 @@ Pair * searchMap(HashMap * map,  char * key) {
       }
     }
   
-  return map->bucket[indice];
+  return map->bucketS[indice];
 }
 
 Pair * firstMap(HashMap * map) {
