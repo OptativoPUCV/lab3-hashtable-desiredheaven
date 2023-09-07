@@ -112,6 +112,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     Pair* dato = map->buckets[indice];
     if (dato != NULL && strcmp(key,dato->key)==0)
     {
+      map->current = indice;
       return map->buckets[indice];
     }
             indice = (indice +1)%map->capacity;
@@ -119,6 +120,7 @@ Pair * searchMap(HashMap * map,  char * key) {
       {
         return NULL;
       }
+    
 
 }
 
