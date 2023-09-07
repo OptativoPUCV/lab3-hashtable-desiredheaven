@@ -199,3 +199,14 @@ hashmap.c:106:1: error: expected identifier or ‘(’ before ‘}’ token
       | ^
 Compilation failed
 881bfe4
+Thu 07 Sep 2023 07:48:26 PM UTC: 
+ hashmap.c | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:99:19: error: ‘aux’ undeclared (first use in this function)
+   99 |     if (indice == aux)
+      |                   ^~~
+hashmap.c:99:19: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+3ce1e52

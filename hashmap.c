@@ -94,8 +94,11 @@ void eraseMap(HashMap * map,  char * key) {
       map->current = indice;
 
       return;
-
-
+    }
+        indice = (indice +1)%map->capacity;
+    if (indice == aux)
+    {
+      return;
     }
   }
 }
@@ -103,7 +106,7 @@ void eraseMap(HashMap * map,  char * key) {
   
 
 
-}
+
 
 Pair * searchMap(HashMap * map,  char * key) {   
 
