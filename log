@@ -730,3 +730,28 @@ hashmap.c:146:10: error: ‘firstMap’ defined but not used [-Werror=unused-fun
 cc1: all warnings being treated as errors
 Compilation failed
 25f16b8
+Sat 09 Sep 2023 02:30:21 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:82:26: error: ‘Pair’ has no member named ‘next’
+   82 |         current = current->next;
+      |                          ^~
+hashmap.c: In function ‘nextMap’:
+hashmap.c:159:28: error: ‘mapa’ undeclared (first use in this function); did you mean ‘map’?
+  159 |     unsigned int indice = (mapa->indiceActual + 1) % mapa->capacidad;
+      |                            ^~~~
+      |                            map
+hashmap.c:159:28: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c: In function ‘firstMap’:
+hashmap.c:156:1: error: control reaches end of non-void function [-Werror=return-type]
+  156 | }
+      | ^
+At top level:
+hashmap.c:146:10: error: ‘firstMap’ defined but not used [-Werror=unused-function]
+  146 |   Pair * firstMap(HashMap * map) {
+      |          ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8f39215
