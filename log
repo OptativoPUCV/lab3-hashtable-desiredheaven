@@ -985,3 +985,13 @@ hashmap.c:163:16: error: ‘HashMap’ {aka ‘struct HashMap’} has no member 
       |                ^~
 Compilation failed
 dc88ab4
+Sat 09 Sep 2023 02:35:01 AM UTC: 
+ hashmap.c | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:82:26: error: ‘Pair’ has no member named ‘indice’
+   82 |         current = current->indice;
+      |                          ^~
+Compilation failed
+2db58e5
