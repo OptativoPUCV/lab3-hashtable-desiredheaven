@@ -965,3 +965,23 @@ hashmap.c:163:16: error: ‘HashMap’ {aka ‘struct HashMap’} has no member 
       |                ^~
 Compilation failed
 46b1503
+Sat 09 Sep 2023 02:34:07 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:82:26: error: ‘Pair’ has no member named ‘indice’
+   82 |         current = current->indice;
+      |                          ^~
+hashmap.c: In function ‘nextMap’:
+hashmap.c:161:25: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘indiceActual’
+  161 |     while (indice != map->indiceActual) {
+      |                         ^~
+hashmap.c:162:65: error: ‘Pair’ has no member named ‘clave’
+  162 |         if (map->buckets[indice] != NULL && map->buckets[indice]->clave != NULL) {
+      |                                                                 ^~
+hashmap.c:163:16: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘indiceActual’
+  163 |             map->indiceActual = indice;
+      |                ^~
+Compilation failed
+dc88ab4
