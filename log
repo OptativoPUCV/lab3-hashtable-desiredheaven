@@ -1212,3 +1212,12 @@ Sat 09 Sep 2023 02:52:39 AM UTC:
  tests:  16|1
 total_score: 60/70
 c3fc5db
+Sat 09 Sep 2023 02:52:48 AM UTC: 
+ hashmap.c | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+hashmap.c:172:1: error: expected identifier or ‘(’ before ‘}’ token
+  172 | }
+      | ^
+Compilation failed
+5fd6760
