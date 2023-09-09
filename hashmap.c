@@ -170,7 +170,8 @@ Pair * nextMap(HashMap * map) {
         }
         i = (i + 1) % map->capacity;
     }
-    map->current = i;
+    
+    map->current = -1;
     return NULL;
 }
 
