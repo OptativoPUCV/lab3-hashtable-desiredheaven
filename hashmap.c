@@ -140,6 +140,10 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
+  if (map == NULL || map->buckets== NULL||map->size == 0)
+  {
+    return NULL;
+  }
 
     return NULL;
 }
