@@ -74,9 +74,6 @@ void enlarge(HashMap * map) {
     map->size = 0;
     
 
-    for(int i = 0; i<aux_capacity; i++)
-      {
-      Pair * current = aux_buckets[i];
 
       }
       }

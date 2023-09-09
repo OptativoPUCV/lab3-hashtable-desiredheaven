@@ -1032,3 +1032,21 @@ hashmap.c:79:14: error: unused variable ‘current’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 4cf513a
+Sat 09 Sep 2023 02:38:27 AM UTC: 
+ hashmap.c | 3 ---
+ 1 file changed, 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:71:7: error: unused variable ‘aux_capacity’ [-Werror=unused-variable]
+   71 |   int aux_capacity = map->capacity;
+      |       ^~~~~~~~~~~~
+hashmap.c:70:9: error: unused variable ‘aux_buckets’ [-Werror=unused-variable]
+   70 |   Pair**aux_buckets = map->buckets;
+      |         ^~~~~~~~~~~
+hashmap.c: At top level:
+hashmap.c:79:7: error: expected identifier or ‘(’ before ‘}’ token
+   79 |       }
+      |       ^
+cc1: all warnings being treated as errors
+Compilation failed
+5ae363b
