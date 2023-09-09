@@ -995,3 +995,13 @@ hashmap.c:82:26: error: ‘Pair’ has no member named ‘indice’
       |                          ^~
 Compilation failed
 2db58e5
+Sat 09 Sep 2023 02:35:35 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:82:26: error: ‘Pair’ has no member named ‘i’
+   82 |         current = current->i;
+      |                          ^~
+Compilation failed
+a5709d7
