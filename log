@@ -473,3 +473,16 @@ hashmap.c:132:75: error: expected statement before ‘)’ token
 cc1: all warnings being treated as errors
 Compilation failed
 8ab5254
+Sat 09 Sep 2023 12:41:33 AM UTC: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:135:33: error: expected ‘;’ before ‘}’ token
+  135 |           return map->buckets[i]
+      |                                 ^
+      |                                 ;
+  136 |         }
+      |         ~                        
+Compilation failed
+e0084a8
