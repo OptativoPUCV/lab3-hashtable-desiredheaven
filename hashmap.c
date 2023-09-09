@@ -79,7 +79,7 @@ for (int i = 0; i < aux_capacity; i++) {
             Pair * temp = current;
             current = current->next;
             int index = hash(temp->key) % map->capacity;
-            temp->next = map->buckets[index];
+            temp->next = map->buckets[i];
             map->buckets[index] = temp;
             map->size++;
 
