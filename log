@@ -582,3 +582,31 @@ hashmap.c:71:7: error: unused variable ‘aux_buckets’ [-Werror=unused-variabl
 cc1: all warnings being treated as errors
 Compilation failed
 2d94692
+Sat 09 Sep 2023 02:04:06 AM UTC: 
+ hashmap.c | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:73:48: error: ‘size’ undeclared (first use in this function)
+   73 |   map->buckets = (Pair**)calloc(map->capacity, size of(Pair*));
+      |                                                ^~~~
+hashmap.c:73:48: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:73:52: error: expected ‘)’ before ‘of’
+   73 |   map->buckets = (Pair**)calloc(map->capacity, size of(Pair*));
+      |                                ~                   ^~~
+      |                                                    )
+hashmap.c:77:14: error: expected identifier or ‘(’ before ‘=’ token
+   77 |     for (int = 0; i<aux_capacity; i++)
+      |              ^
+hashmap.c:77:19: error: ‘i’ undeclared (first use in this function)
+   77 |     for (int = 0; i<aux_capacity; i++)
+      |                   ^
+hashmap.c:82:27: error: ‘Pair’ has no member named ‘next’
+   82 |         current = current ->next;
+      |                           ^~
+hashmap.c:70:9: error: variable ‘aux_buckets’ set but not used [-Werror=unused-but-set-variable]
+   70 |   Pair**aux_buckets = map->buckets;
+      |         ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a89aa0e
