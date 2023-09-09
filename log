@@ -610,3 +610,36 @@ hashmap.c:70:9: error: variable ‘aux_buckets’ set but not used [-Werror=unus
 cc1: all warnings being treated as errors
 Compilation failed
 a89aa0e
+Sat 09 Sep 2023 02:27:27 AM UTC: 
+ hashmap.c | 20 +++++++++-----------
+ 1 file changed, 9 insertions(+), 11 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:73:48: error: ‘size’ undeclared (first use in this function)
+   73 |   map->buckets = (Pair**)calloc(map->capacity, size of(Pair*));
+      |                                                ^~~~
+hashmap.c:73:48: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:73:52: error: expected ‘)’ before ‘of’
+   73 |   map->buckets = (Pair**)calloc(map->capacity, size of(Pair*));
+      |                                ~                   ^~~
+      |                                                    )
+hashmap.c:77:14: error: expected identifier or ‘(’ before ‘=’ token
+   77 |     for (int = 0; i<aux_capacity; i++)
+      |              ^
+hashmap.c:77:19: error: ‘i’ undeclared (first use in this function)
+   77 |     for (int = 0; i<aux_capacity; i++)
+      |                   ^
+hashmap.c:82:26: error: ‘Pair’ has no member named ‘next’
+   82 |         current = current->next;
+      |                          ^~
+hashmap.c:70:9: error: variable ‘aux_buckets’ set but not used [-Werror=unused-but-set-variable]
+   70 |   Pair**aux_buckets = map->buckets;
+      |         ^~~~~~~~~~~
+hashmap.c: In function ‘nextMap’:
+hashmap.c:159:28: error: ‘mapa’ undeclared (first use in this function); did you mean ‘map’?
+  159 |     unsigned int indice = (mapa->indiceActual + 1) % mapa->capacidad;
+      |                            ^~~~
+      |                            map
+cc1: all warnings being treated as errors
+Compilation failed
+8f02107

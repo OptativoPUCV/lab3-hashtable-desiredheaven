@@ -79,7 +79,7 @@ void enlarge(HashMap * map) {
       Pair * current = aux_buckets[i];
       while (current!=NULL){
         insertMap (map, current->key, current->value);
-        current = current ->next;
+        current = current->next;
       }
       }
   
@@ -156,17 +156,15 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-  if (map == NULL || map->buckets== NULL||map->size == 0)
-  {
-    return NULL;
-  }
-  for (int i = map->current +1; i < map->capacity; i++)
-    {
-      if (map->buckets[i] !=NULL)
-      {
-        map->current = i;
-        return map->buckets[i];
-      }
+    unsigned int indice = (mapa->indiceActual + 1) % mapa->capacidad;
+    
+    while (indice != mapa->indiceActual) {
+        if (mapa->buckets[indice] != NULL && mapa->buckets[indice]->clave != NULL) {
+            mapa->indiceActual = indice;
+            return mapa->buckets[indice];
+        }
+        indice = (indice + 1) % mapa->capacidad;
     }
-    return NULL;
+    return NULL; // No se encontró un par válido.
 }
+
