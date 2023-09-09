@@ -1095,3 +1095,22 @@ test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-funct
 cc1: all warnings being treated as errors
 Compilation failed
 c28d138
+Sat 09 Sep 2023 02:41:38 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:80:30: error: ‘Pair’ has no member named ‘next’
+   80 |             current = current->next;
+      |                              ^~
+hashmap.c:81:25: error: too few arguments to function ‘hash’
+   81 |             int index = hash(temp->key) % map->capacity;
+      |                         ^~~~
+hashmap.c:26:6: note: declared here
+   26 | long hash( char * key, long capacity) {
+      |      ^~~~
+hashmap.c:82:17: error: ‘Pair’ has no member named ‘next’
+   82 |             temp->next = map->buckets[index];
+      |                 ^~
+Compilation failed
+fa71e43
