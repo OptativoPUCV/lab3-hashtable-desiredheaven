@@ -528,3 +528,20 @@ hashmap.c:71:7: error: unused variable ‘aux_buckets’ [-Werror=unused-variabl
 cc1: all warnings being treated as errors
 Compilation failed
 e04340b
+Sat 09 Sep 2023 01:28:27 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:71:7: error: conflicting types for ‘aux_buckets’; have ‘int’
+   71 |   int aux_buckets = map->capacity;
+      |       ^~~~~~~~~~~
+hashmap.c:70:9: note: previous definition of ‘aux_buckets’ with type ‘Pair **’
+   70 |   Pair**aux_buckets = map->buckets;
+      |         ^~~~~~~~~~~
+hashmap.c:71:7: error: unused variable ‘aux_buckets’ [-Werror=unused-variable]
+   71 |   int aux_buckets = map->capacity;
+      |       ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7cc8e85
