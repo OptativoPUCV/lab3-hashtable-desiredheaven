@@ -1165,3 +1165,14 @@ hashmap.c:87:17: error: ‘Pair’ has no member named ‘new’
       |                 ^~
 Compilation failed
 803e6ed
+Sat 09 Sep 2023 02:46:51 AM UTC: 
+ hashmap.c | 16 +++++++---------
+ 1 file changed, 7 insertions(+), 9 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:71:10: error: unused variable ‘old_capacity’ [-Werror=unused-variable]
+   71 |     long old_capacity = map->capacity;
+      |          ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a1a7e60

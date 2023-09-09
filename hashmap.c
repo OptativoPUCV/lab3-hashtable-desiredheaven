@@ -78,15 +78,13 @@ void enlarge(HashMap * map) {
     }
 
     map->size = 0;
-    for (long i = 0; i < old_capacity; i++) {
-        Pair *current = old_buckets[i];
-        while (current != NULL) {
-            Pair *temp = current;
-            current = current->new;
-            long index = hash(temp->key, map->capacity);
-            temp->new = map->buckets[index];
-            map->buckets[index] = temp;
-            map->size++;
+    for (long i = 0; i < map->capacity; i++) {
+        map->buckets[i] = NULL;
+    }
+    map->size = 0;
+    for (long i = 0; i < map->capacity / 2; i++) {
+        if (old_buckets[i] != NULL && old_buckets[i]->key != NULL) {
+            insertMap(map, old_buckets[i]->key, old_buckets[i]->value);
         }
     }
 
