@@ -1005,3 +1005,8 @@ hashmap.c:82:26: error: ‘Pair’ has no member named ‘i’
       |                          ^~
 Compilation failed
 a5709d7
+Sat 09 Sep 2023 02:35:47 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+112100a
