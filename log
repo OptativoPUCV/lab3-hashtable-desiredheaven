@@ -504,3 +504,27 @@ Sat 09 Sep 2023 01:19:36 AM UTC:
  tests:  12|2
 total_score: 50/70
 0a2603a
+Sat 09 Sep 2023 01:28:18 AM UTC: 
+ hashmap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:70:3: error: unknown type name ‘pair’; did you mean ‘Pair’?
+   70 |   pair**aux_buckets = map->buckets;
+      |   ^~~~
+      |   Pair
+hashmap.c:70:23: error: initialization of ‘int **’ from incompatible pointer type ‘Pair **’ [-Werror=incompatible-pointer-types]
+   70 |   pair**aux_buckets = map->buckets;
+      |                       ^~~
+hashmap.c:71:7: error: conflicting types for ‘aux_buckets’; have ‘int’
+   71 |   int aux_buckets = map->capacity;
+      |       ^~~~~~~~~~~
+hashmap.c:70:9: note: previous definition of ‘aux_buckets’ with type ‘int **’
+   70 |   pair**aux_buckets = map->buckets;
+      |         ^~~~~~~~~~~
+hashmap.c:71:7: error: unused variable ‘aux_buckets’ [-Werror=unused-variable]
+   71 |   int aux_buckets = map->capacity;
+      |       ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e04340b
