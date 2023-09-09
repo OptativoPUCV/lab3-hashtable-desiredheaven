@@ -156,7 +156,7 @@ Pair * firstMap(HashMap * map) {
 
 
 Pair * nextMap(HashMap * map) {
-    unsigned int indice = (map->indiceActual + 1) % map->capacity;
+    unsigned int indice = (map->current + 1) % map->capacity;
     
     while (indice != map->indiceActual) {
         if (map->buckets[indice] != NULL && map->buckets[indice]->clave != NULL) {
