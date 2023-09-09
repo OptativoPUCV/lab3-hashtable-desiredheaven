@@ -77,9 +77,9 @@ for (int i = 0; i < aux_capacity; i++) {
         Pair * current = aux_buckets[i];
         while (current != NULL) {
             Pair * temp = current;
-            current = current->next;
+            current = current->new;
             int index = hash(temp->key) % map->capacity;
-            temp->next = map->buckets[i];
+            temp->new = map->buckets[i];
             map->buckets[index] = temp;
             map->size++;
 
