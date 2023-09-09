@@ -1021,3 +1021,14 @@ hashmap.c:82:17: error: assignment to ‘Pair *’ from incompatible pointer typ
 cc1: all warnings being treated as errors
 Compilation failed
 8c5fc01
+Sat 09 Sep 2023 02:38:12 AM UTC: 
+ hashmap.c | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:79:14: error: unused variable ‘current’ [-Werror=unused-variable]
+   79 |       Pair * current = aux_buckets[i];
+      |              ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4cf513a

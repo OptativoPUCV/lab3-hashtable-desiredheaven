@@ -77,13 +77,11 @@ void enlarge(HashMap * map) {
     for(int i = 0; i<aux_capacity; i++)
       {
       Pair * current = aux_buckets[i];
-      while (current!=NULL){
-        insertMap (map, current->key, current->value);
-        current = current->key;
+
       }
       }
   
-}
+
 
 
 HashMap * createMap(long capacity) {
