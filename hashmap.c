@@ -153,6 +153,7 @@ Pair * firstMap(HashMap * map) {
     return NULL; 
 
 }
+}
 
 Pair * nextMap(HashMap * map) {
     unsigned int indice = (mapa->indiceActual + 1) % mapa->capacidad;

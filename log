@@ -696,3 +696,37 @@ test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-funct
 cc1: all warnings being treated as errors
 Compilation failed
 115c551
+Sat 09 Sep 2023 02:29:33 AM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:77:14: error: expected identifier or ‘(’ before ‘=’ token
+   77 |     for (int = 0; i<aux_capacity; i++)
+      |              ^
+hashmap.c:77:19: error: ‘i’ undeclared (first use in this function)
+   77 |     for (int = 0; i<aux_capacity; i++)
+      |                   ^
+hashmap.c:77:19: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:82:26: error: ‘Pair’ has no member named ‘next’
+   82 |         current = current->next;
+      |                          ^~
+hashmap.c:70:9: error: variable ‘aux_buckets’ set but not used [-Werror=unused-but-set-variable]
+   70 |   Pair**aux_buckets = map->buckets;
+      |         ^~~~~~~~~~~
+hashmap.c: In function ‘nextMap’:
+hashmap.c:159:28: error: ‘mapa’ undeclared (first use in this function); did you mean ‘map’?
+  159 |     unsigned int indice = (mapa->indiceActual + 1) % mapa->capacidad;
+      |                            ^~~~
+      |                            map
+hashmap.c: In function ‘firstMap’:
+hashmap.c:156:1: error: control reaches end of non-void function [-Werror=return-type]
+  156 | }
+      | ^
+At top level:
+hashmap.c:146:10: error: ‘firstMap’ defined but not used [-Werror=unused-function]
+  146 |   Pair * firstMap(HashMap * map) {
+      |          ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+25f16b8
