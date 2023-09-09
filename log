@@ -1176,3 +1176,9 @@ hashmap.c:71:10: error: unused variable ‘old_capacity’ [-Werror=unused-varia
 cc1: all warnings being treated as errors
 Compilation failed
 a1a7e60
+Sat 09 Sep 2023 02:47:06 AM UTC: 
+ hashmap.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  16|1
+total_score: 60/70
+b696e05

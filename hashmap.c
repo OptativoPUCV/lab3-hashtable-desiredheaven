@@ -68,7 +68,6 @@ void enlarge(HashMap * map) {
     enlarge_called = 1;
 
     Pair **old_buckets = map->buckets;
-    long old_capacity = map->capacity;
 
     map->capacity *= 2;
 
