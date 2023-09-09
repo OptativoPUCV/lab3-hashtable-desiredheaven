@@ -164,13 +164,13 @@ Pair * nextMap(HashMap * map) {
     unsigned int i = (map->current + 1) % map->capacity;
     
     while (i != map->current) {
-        if (map->buckets[i] != NULL && map->buckets[i]->key != NULL){
+        if (map->buckets[i] != NULL && map->buckets[i]->key != NULL) {
             map->current = i;
-            return NULL;
+            return map->buckets[i];
         }
         i = (i + 1) % map->capacity;
     }
-    
+
     map->current = -1;
     return NULL;
 }
