@@ -158,10 +158,10 @@ Pair * firstMap(HashMap * map) {
 Pair * nextMap(HashMap * map) {
     unsigned int indice = (map->indiceActual + 1) % map->capacidad;
     
-    while (indice != mapa->indiceActual) {
-        if (mapa->buckets[indice] != NULL && mapa->buckets[indice]->clave != NULL) {
-            mapa->indiceActual = indice;
-            return mapa->buckets[indice];
+    while (indice != map->indiceActual) {
+        if (map->buckets[indice] != NULL && map->buckets[indice]->clave != NULL) {
+            map->indiceActual = indice;
+            return map->buckets[indice];
         }
         indice = (indice + 1) % mapa->capacidad;
     }
