@@ -1010,3 +1010,14 @@ Sat 09 Sep 2023 02:35:47 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 112100a
+Sat 09 Sep 2023 02:36:04 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:82:17: error: assignment to ‘Pair *’ from incompatible pointer type ‘char *’ [-Werror=incompatible-pointer-types]
+   82 |         current = current->key;
+      |                 ^
+cc1: all warnings being treated as errors
+Compilation failed
+8c5fc01

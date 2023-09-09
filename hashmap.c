@@ -79,7 +79,7 @@ void enlarge(HashMap * map) {
       Pair * current = aux_buckets[i];
       while (current!=NULL){
         insertMap (map, current->key, current->value);
-        current = current->value;
+        current = current->key;
       }
       }
   
