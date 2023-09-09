@@ -144,6 +144,13 @@ Pair * nextMap(HashMap * map) {
   {
     return NULL;
   }
-
+  for (int i = map->current +1; i < map->capacity; i++)
+    {
+      if (map->buckets[i] !=NULL)
+      {
+        map->current = i;
+        return map->buckets[i];
+      }
+    }
     return NULL;
 }
