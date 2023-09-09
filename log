@@ -1152,3 +1152,16 @@ hashmap.c:82:17: error: ‘Pair’ has no member named ‘new’
       |                 ^~
 Compilation failed
 f243086
+Sat 09 Sep 2023 02:45:39 AM UTC: 
+ hashmap.c | 25 +++++++++++++++----------
+ 1 file changed, 15 insertions(+), 10 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:85:30: error: ‘Pair’ has no member named ‘new’
+   85 |             current = current->new;
+      |                              ^~
+hashmap.c:87:17: error: ‘Pair’ has no member named ‘new’
+   87 |             temp->new = map->buckets[index];
+      |                 ^~
+Compilation failed
+803e6ed
