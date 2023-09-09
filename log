@@ -452,3 +452,24 @@ hashmap.c:132:28: error: expected expression before ‘!=’ token
       |                            ^~
 Compilation failed
 ac4a434
+Sat 09 Sep 2023 12:40:19 AM UTC: 
+ hashmap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:132:28: error: expected expression before ‘!=’ token
+  132 |       if (map->buckets[i]) != NULL && strcpy(map->buckets[i]->key,key)==0))
+      |                            ^~
+hashmap.c:132:7: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  132 |       if (map->buckets[i]) != NULL && strcpy(map->buckets[i]->key,key)==0))
+      |       ^~
+hashmap.c:132:74: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  132 |       if (map->buckets[i]) != NULL && strcpy(map->buckets[i]->key,key)==0))
+      |                                                                          ^
+hashmap.c:132:74: error: expected statement before ‘)’ token
+hashmap.c:132:75: error: expected statement before ‘)’ token
+  132 |       if (map->buckets[i]) != NULL && strcpy(map->buckets[i]->key,key)==0))
+      |                                                                           ^
+cc1: all warnings being treated as errors
+Compilation failed
+8ab5254
