@@ -70,7 +70,7 @@ void enlarge(HashMap * map) {
   Pair**aux_buckets = map->buckets;
   int aux_capacity = map->capacity;
   map->capacity *=2;
-  map->buckets = (Pair**)calloc(map->capacity, size of(Pair*));
+  map->buckets = (Pair**)calloc(map->capacity, sizeof(Pair*));
     map->size = 0;
     
 
@@ -143,16 +143,15 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-  for(int i =0; i < map->capacity; i++)
-    {
-      if ((map->buckets[i]) != NULL && map->buckets != NULL)
-        {
-          map->current = i;
-          return map->buckets[i];
+  Pair * firstMap(HashMap * map) {
+    for (unsigned int i = 0; i < map->capacity; i++) {
+        if (map->buckets[i] && map->buckets[i]->key) {
+            map->current = i;
+            return map->buckets[i];
         }
     }
+    return NULL; 
 
-    return NULL;
 }
 
 Pair * nextMap(HashMap * map) {
@@ -165,6 +164,6 @@ Pair * nextMap(HashMap * map) {
         }
         indice = (indice + 1) % mapa->capacidad;
     }
-    return NULL; // No se encontró un par válido.
+    return NULL;
 }
 
