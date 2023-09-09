@@ -69,7 +69,11 @@ void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
   Pair**aux_buckets = map->buckets;
   int aux_buckets = map->capacity;
-  
+  map->capacity *=2;
+  map->buckets = (Pair**)calloc(map->capacity, size of(Pair*));
+    map->size = 0;
+
+    for (int = 0; i<)
   
 }
 

@@ -545,3 +545,40 @@ hashmap.c:71:7: error: unused variable ‘aux_buckets’ [-Werror=unused-variabl
 cc1: all warnings being treated as errors
 Compilation failed
 7cc8e85
+Sat 09 Sep 2023 02:01:11 AM UTC: 
+ hashmap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:71:7: error: conflicting types for ‘aux_buckets’; have ‘int’
+   71 |   int aux_buckets = map->capacity;
+      |       ^~~~~~~~~~~
+hashmap.c:70:9: note: previous definition of ‘aux_buckets’ with type ‘Pair **’
+   70 |   Pair**aux_buckets = map->buckets;
+      |         ^~~~~~~~~~~
+hashmap.c:73:48: error: ‘size’ undeclared (first use in this function)
+   73 |   map->buckets = (Pair**)calloc(map->capacity, size of(Pair*));
+      |                                                ^~~~
+hashmap.c:73:48: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:73:52: error: expected ‘)’ before ‘of’
+   73 |   map->buckets = (Pair**)calloc(map->capacity, size of(Pair*));
+      |                                ~                   ^~~
+      |                                                    )
+hashmap.c:76:14: error: expected identifier or ‘(’ before ‘=’ token
+   76 |     for (int = 0; i<)
+      |              ^
+hashmap.c:76:19: error: ‘i’ undeclared (first use in this function)
+   76 |     for (int = 0; i<)
+      |                   ^
+hashmap.c:76:21: error: expected expression before ‘)’ token
+   76 |     for (int = 0; i<)
+      |                     ^
+hashmap.c:78:1: error: expected expression before ‘}’ token
+   78 | }
+      | ^
+hashmap.c:71:7: error: unused variable ‘aux_buckets’ [-Werror=unused-variable]
+   71 |   int aux_buckets = map->capacity;
+      |       ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2d94692
